@@ -53,7 +53,6 @@ Das ist der Filter Hook: ***job_manager_job_listing_data_fields***
   Select Liste | `'type' => 'select','options' => array('option1' => 'Option 1'),`
  WordPress Editor| `'type' => 'wp-editor',`
   Datepicker| `'type' => 'text', 'classes'     => array( 'job-manager-datepicker' ),`
-  Datepicker| `'type' => 'text', 'classes'     => array( 'job-manager-datepicker' ),`
  
 
 ## 5. Felder ausgeben
@@ -73,17 +72,13 @@ Diese Funktion ist beispielhaft für andere Plugins. Alle Plugins von Automatic,
 Das ist der Quelltext, um das Feld im Frontend auszugeben.
 
     <?php
-	    
-		//Ausgabe wird von Post Meta beeinflusst
-		
     	$date = get_post_meta(
     		$post->ID, '_beginjob', true
     		);
     		 if($date != ''){
     			echo ('<strong>Beginn der Arbeit:</strong>'); 
-				
-				//Ausgabe vom Backend
-    			echo date("d.m.o", strtotime($date));
-		   }  
+    			
+			echo date("d.m.o", strtotime($date));
+		 }  
 		
      ?>
