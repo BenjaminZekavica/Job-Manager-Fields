@@ -53,6 +53,10 @@ Das ist der Filter Hook: ***job_manager_job_listing_data_fields***
   Select Liste | `'type' => 'select','options' => array('option1' => 'Option 1'),`
  WordPress Editor| `'type' => 'wp-editor',`
   Datepicker| `'type' => 'text', 'classes'     => array( 'job-manager-datepicker' ),`
+  
+   Mit diesem Befehlt, sagst du dem Feld, dass es ausgefüllt werden muss.. 
+   
+  'required'    => true, 
  
 
 ## 5. Felder ausgeben
@@ -82,3 +86,5 @@ Das ist der Quelltext, um das Feld im Frontend auszugeben.
 		 }  
 		
      ?>
+     
+     
